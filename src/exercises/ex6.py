@@ -7,9 +7,11 @@ Funcions:
     fun_summary_1996_2025(total_pts, home_goals, away_goals, total_goals) -> pd.DataFrame
     podium(summary_df) -> None
 """
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import config
+
 
 
 def fun_total_goals(data: pd.DataFrame) -> tuple[int, int, int]:
@@ -129,7 +131,8 @@ def podium(summary_1996_2025: pd.DataFrame) -> None:
     ax.set_yticks([])
     ax.set_title("Pòdium La Liga 1995‑2025", fontsize=14)
     plt.tight_layout()
-    plt.savefig(
-        f"img/grafica_ex6_{config.nom_alumne}_{config.date_time}.png"
-    )
+
+    ruta_base = os.path.dirname(__file__)
+    nombre_img = f"grafica_ex6_{config.nom_alumne}_{config.date_time}.png"
+    plt.savefig(os.path.join(ruta_base, "..", "img", nombre_img))
     plt.show()

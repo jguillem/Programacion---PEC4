@@ -5,9 +5,11 @@ Funcions:
     load_and_eda(file) -> pd.DataFrame
     plot_home_away_goals(data) -> None
 """
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import config
+
 
 
 def load_and_eda(file: str) -> pd.DataFrame:
@@ -54,7 +56,8 @@ def plot_home_away_goals(data: pd.DataFrame) -> None:
     axes[1].set_ylabel("Gols")
 
     plt.tight_layout()
-    plt.savefig(
-        f"img/grafica_ex1_{config.nom_alumne}_{config.date_time}.png"
-    )
+
+    ruta_base = os.path.dirname(__file__)
+    nombre_img = f"grafica_ex1_{config.nom_alumne}_{config.date_time}.png"
+    plt.savefig(os.path.join(ruta_base, "..", "img", nombre_img))
     plt.show()

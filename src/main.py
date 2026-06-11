@@ -11,13 +11,13 @@ Per exemple, ``-ex 5`` executa els exercicis 1 al 5.
 import argparse
 import os
 import sys
-
-sys.path.insert(0, os.path.dirname(__file__))
-
 import config
 from exercises import ex1, ex2, ex3, ex4, ex5, ex6, ex7
 
-DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "LaLiga_Matches.csv")
+sys.path.insert(0, os.path.dirname(__file__))
+
+
+DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "LaLiga_Matches.csv")
 
 
 def parse_args() -> argparse.Namespace:
@@ -46,7 +46,7 @@ def parse_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-
+# pylint: disable=too-many-locals, too-many-statements
 def run(max_ex: int) -> None:
     """Executa seqüencialment els exercicis fins a ``max_ex``.
 

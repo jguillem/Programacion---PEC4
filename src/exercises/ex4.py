@@ -5,9 +5,11 @@ Funcions:
     ftr(data) -> pd.DataFrame
     plot_ftr(ftr_df) -> None
 """
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import config
+
 
 
 def ftr(data: pd.DataFrame) -> pd.DataFrame:
@@ -43,7 +45,8 @@ def plot_ftr(ftr_df: pd.DataFrame) -> None:
     ax.set_ylabel("Nombre de partits")
     ax.set_xticklabels(ftr_df.index, rotation=0)
     plt.tight_layout()
-    plt.savefig(
-        f"img/grafica_ex4_{config.nom_alumne}_{config.date_time}.png"
-    )
+
+    ruta_base = os.path.dirname(__file__)
+    nombre_img = f"grafica_ex4_{config.nom_alumne}_{config.date_time}.png"
+    plt.savefig(os.path.join(ruta_base, "..", "img", nombre_img))
     plt.show()

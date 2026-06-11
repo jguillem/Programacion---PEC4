@@ -5,9 +5,11 @@ Funcions:
     goals_distribution(data) -> tuple[pd.DataFrame, pd.DataFrame]
     plot_goals_distribution(distr_goals_home, distr_goals_away) -> None
 """
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import config
+
 
 
 def goals_distribution(
@@ -68,7 +70,8 @@ def plot_goals_distribution(
     axes[1].set_ylabel("Partits")
 
     plt.tight_layout()
-    plt.savefig(
-        f"img/grafica_ex3_{config.nom_alumne}_{config.date_time}.png"
-    )
+
+    ruta_base = os.path.dirname(__file__)
+    nombre_img = f"grafica_ex3_{config.nom_alumne}_{config.date_time}.png"
+    plt.savefig(os.path.join(ruta_base, "..", "img", nombre_img))
     plt.show()

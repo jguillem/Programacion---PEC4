@@ -4,6 +4,7 @@ ex7.py – Exercici 7: Graf de connexions entre els 5 millors equips.
 Funcions:
     graf(data, selected_teams) -> None
 """
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -56,7 +57,8 @@ def graf(data: pd.DataFrame, selected_teams: list[str]) -> None:
     ax.set_title("Graf de partits entre els 5 millors equips (1995‑2025)", fontsize=13)
     ax.axis("off")
     plt.tight_layout()
-    plt.savefig(
-        f"img/grafica_ex7_{config.nom_alumne}_{config.date_time}.png"
-    )
+
+    ruta_base = os.path.dirname(__file__)
+    nombre_img = f"grafica_ex7_{config.nom_alumne}_{config.date_time}.png"
+    plt.savefig(os.path.join(ruta_base, "..", "img", nombre_img))
     plt.show()
