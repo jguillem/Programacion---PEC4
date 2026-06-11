@@ -133,6 +133,7 @@ S'utilitza **pytest**:
 # Executa els tests
 python -m pytest tests/tests_ex6.py -v
 
+
 ```
 
 > Consulta `screenshots/` per veure la captura dels tests passant correctament.
@@ -152,6 +153,9 @@ git remote add origin https://github.com/<usuari>/<repositori>.git
 git branch -M main
 git push -u origin main
 ```
+
+> Consulta `screenshots/` per veure el resultat del push.
+
 
 # Vaig afegir la carpeta .venv i __pycache__ al .gitignore per tal de no pujar-les a GitHub.
 

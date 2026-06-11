@@ -12,11 +12,10 @@ import argparse
 import os
 import sys
 
-# sys.path manipulation nécessaire pour importer config et exercises depuis src/
-sys.path.insert(0, os.path.dirname(__file__))  # pylint: disable=wrong-import-position
+sys.path.insert(0, os.path.dirname(__file__))
 
-import config  # pylint: disable=wrong-import-position
-from exercises import ex1, ex2, ex3, ex4, ex5, ex6, ex7  # pylint: disable=wrong-import-position
+import config
+from exercises import ex1, ex2, ex3, ex4, ex5, ex6, ex7
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "LaLiga_Matches.csv")
 
@@ -48,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def run(max_ex: int) -> None:  # pylint: disable=too-many-locals,too-many-statements
+def run(max_ex: int) -> None:
     """Executa seqüencialment els exercicis fins a ``max_ex``.
 
     Args:
