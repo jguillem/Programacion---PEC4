@@ -1,0 +1,15 @@
+[MASTER]
+# Fitxer de configuració Pylint per a PEC4
+
+[FORMAT]
+max-line-length=100
+
+[MESSAGES CONTROL]
+# Desactivem avisos que no afecten la llegibilitat d'aquest projecte
+disable=
+    C0114,  # missing-module-docstring (ja tenim tots els docstrings)
+    R0903,  # too-few-public-methods
+    W0611,  # unused-import (gestionat manualment)
+
+[DESIGN]
+max-args=8

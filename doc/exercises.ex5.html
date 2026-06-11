@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module exercises.ex5</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="exercises.html" class="white">exercises</a>.ex5</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/jguillem/Documentos/UOC/Semestre%202/Programaci%C3%B3n%20/PEC4/src/exercises/ex5.py">/home/jguillem/Documentos/UOC/Semestre 2/Programación /PEC4/src/exercises/ex5.py</a></td></tr></table>
+    <p><span class="code">ex5.py&nbsp;–&nbsp;Exercici&nbsp;5:&nbsp;Classificació&nbsp;global&nbsp;1995‑2025.<br>
+&nbsp;<br>
+Funcions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-add_points">add_points</a>(data)&nbsp;-&gt;&nbsp;pd.DataFrame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-fun_total_points">fun_total_points</a>(data)&nbsp;-&gt;&nbsp;tuple[pd.Series,&nbsp;pd.DataFrame]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-alltime_winner">alltime_winner</a>(df_total_points)&nbsp;-&gt;&nbsp;str</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-add_points"><strong>add_points</strong></a>(data: pandas.DataFrame) -&gt; pandas.DataFrame</dt><dd><span class="code">Afegeix&nbsp;les&nbsp;columnes&nbsp;``points_home``&nbsp;i&nbsp;``points_away``&nbsp;al&nbsp;dataset.<br>
+&nbsp;<br>
+Cada&nbsp;columna&nbsp;pot&nbsp;prendre&nbsp;els&nbsp;valors&nbsp;3&nbsp;(victòria),&nbsp;1&nbsp;(empat)&nbsp;o&nbsp;0&nbsp;(derrota).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;DataFrame&nbsp;del&nbsp;dataset&nbsp;de&nbsp;La&nbsp;Liga.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DataFrame&nbsp;ampliat&nbsp;amb&nbsp;les&nbsp;dues&nbsp;columnes&nbsp;de&nbsp;punts.</span></dd></dl>
+ <dl><dt><a name="-alltime_winner"><strong>alltime_winner</strong></a>(df_total_points: pandas.DataFrame) -&gt; str</dt><dd><span class="code">Retorna&nbsp;el&nbsp;nom&nbsp;de&nbsp;l'equip&nbsp;amb&nbsp;més&nbsp;punts&nbsp;acumulats&nbsp;en&nbsp;tota&nbsp;la&nbsp;història.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;df_total_points:&nbsp;DataFrame&nbsp;retornat&nbsp;per&nbsp;:func:`fun_total_points`.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;de&nbsp;l'equip&nbsp;guanyador.</span></dd></dl>
+ <dl><dt><a name="-fun_total_points"><strong>fun_total_points</strong></a>(data: pandas.DataFrame) -&gt; tuple[pandas.Series, pandas.DataFrame]</dt><dd><span class="code">Calcula&nbsp;els&nbsp;punts&nbsp;totals&nbsp;acumulats&nbsp;per&nbsp;cada&nbsp;equip&nbsp;des&nbsp;de&nbsp;1995.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;DataFrame&nbsp;que&nbsp;ja&nbsp;conté&nbsp;les&nbsp;columnes&nbsp;``points_home``&nbsp;i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``points_away``&nbsp;(resultat&nbsp;de&nbsp;:func:`add_points`).<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tupla&nbsp;``(total_points_by_team,&nbsp;df_total_points_by_team)``&nbsp;on&nbsp;el&nbsp;primer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;element&nbsp;és&nbsp;una&nbsp;:class:`pd.Series`&nbsp;i&nbsp;el&nbsp;segon&nbsp;un&nbsp;:class:`pd.DataFrame`,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tots&nbsp;dos&nbsp;ordenats&nbsp;de&nbsp;major&nbsp;a&nbsp;menor&nbsp;puntuació.</span></dd></dl>
+</td></tr></table>
+</body></html>
