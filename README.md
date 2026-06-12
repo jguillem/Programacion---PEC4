@@ -18,12 +18,12 @@ disposa de documentació generada amb pydoc, tests unitaris amb pytest i anàlis
 
 ```
 PEC4/
-├── data/
-│   └── LaLiga_Matches.csv          # Dataset original
 ├── doc/                            # Documentació generada per pydoc
-├── img/                            # Gràfiques generades per cada exercici
 ├── screenshots/                    # Captures de pantalla (autoria, linting, tests)
 ├── src/
+│   ├── data/
+│   │   └── LaLiga_Matches.csv      # Dataset original
+│   ├── img/                        # Gràfiques generades per cada exercici
 │   ├── config.py                   # Variables globals (nom_alumne, date_time)
 │   ├── main.py                     # Punt d'entrada principal
 │   └── exercises/
@@ -37,8 +37,10 @@ PEC4/
 │       └── ex7.py                  # Exercici 7: Graf networkx
 ├── tests/
 │   └── tests_ex6.py                # Tests de fun_total_goals (exercici 6)
+├── .gitignore                      # Arxius a ignorar per git
 ├── .pylintrc                       # Configuració de Pylint
 ├── LICENSE                         # Llicència MIT
+├── PEC4-Enunciado.pdf              # Enunciat de la pràctica
 ├── README.md                       # Aquest fitxer
 └── requirements.txt                # Dependències del projecte
 ```
